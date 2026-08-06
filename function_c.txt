@@ -1,0 +1,19 @@
+#include <stdio.h>
+int max_of_four(int a, int b, int c, int d) {
+    // Pick the winner between a and b
+    int max1 = (a > b) ? a : b;
+    
+    // Pick the winner between c and d
+    int max2 = (c > d) ? c : d;
+    
+    // Return the final winner between the two intermediate maximums
+    return (max1 > max2) ? max1 : max2;
+}
+int main() {
+    int a, b, c, d;
+    scanf("%d %d %d %d", &a, &b, &c, &d);
+    int ans = max_of_four(a, b, c, d);
+    printf("%d", ans);
+    
+    return 0;
+}
